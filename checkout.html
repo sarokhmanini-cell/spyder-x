@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>إتمام الطلب | SPIDBRICK</title>
+  <meta name="robots" content="noindex">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&family=UnifrakturMaguntia&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div id="site-header"></div>
+
+  <main class="wrap">
+    <div class="page-title">
+      <h1>إتمام الطلب</h1>
+      <p>الدفع عند الاستلام. عند الإرسال يفتح واتساب برسالة الطلب جاهزة.</p>
+    </div>
+
+    <div id="checkoutMsg"></div>
+
+    <div class="checkout" id="checkoutWrap">
+      <form class="panel" id="checkoutForm" novalidate>
+        <h2>معلومات التوصيل</h2>
+        <div class="form-grid">
+          <div class="full">
+            <label for="name">الاسم الكامل</label>
+            <input id="name" name="name" autocomplete="name" maxlength="60" placeholder="مثال: أمين بن علي">
+            <div class="err" data-err="name"></div>
+          </div>
+
+          <div>
+            <label for="phone">رقم الهاتف</label>
+            <input id="phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" maxlength="16" placeholder="0555 12 34 56">
+            <div class="err" data-err="phone"></div>
+          </div>
+
+          <div>
+            <label for="wilaya">الولاية</label>
+            <select id="wilaya" name="wilaya"></select>
+            <div class="err" data-err="wilaya"></div>
+          </div>
+
+          <div>
+            <label for="city">البلدية / المدينة</label>
+            <input id="city" name="city" maxlength="60" placeholder="مثال: باب الزوار">
+            <div class="err" data-err="city"></div>
+          </div>
+
+          <div class="full">
+            <label for="address">العنوان الكامل</label>
+            <textarea id="address" name="address" maxlength="200" placeholder="الحي، الشارع، رقم المنزل، علامة مميزة..."></textarea>
+            <div class="err" data-err="address"></div>
+          </div>
+
+          <div class="full">
+            <label for="notes">ملاحظات (اختياري)</label>
+            <textarea id="notes" name="notes" maxlength="300" placeholder="وقت مناسب للاتصال، تعليمات للتوصيل..."></textarea>
+            <div class="err" data-err="notes"></div>
+          </div>
+        </div>
+
+        <div class="notice">الدفع يكون نقداً عند استلام الطلب. لا توجد بطاقات بنكية ولا دفع إلكتروني على هذا الموقع.</div>
+
+        <div class="submit-row">
+          <button type="submit" class="btn primary" id="submitBtn">إرسال الطلب عبر واتساب</button>
+        </div>
+      </form>
+
+      <aside class="panel" id="orderSummary">
+        <h2>ملخص الطلب</h2>
+        <div id="sumLines"></div>
+        <div class="mini-line"><span>المجموع الفرعي</span><span id="sumSub">0</span></div>
+        <div class="mini-line"><span>التوصيل</span><span id="sumFee">اختر الولاية</span></div>
+        <div class="mini-line" style="font-weight:800;color:var(--white);border:0;font-size:18px"><span>الإجمالي</span><span id="sumTotal">0</span></div>
+      </aside>
+    </div>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="js/config.js"></script>
+  <script src="js/store.js"></script>
+  <script src="js/layout.js"></script>
+  <script src="js/checkout.js"></script>
+</body>
+</html>

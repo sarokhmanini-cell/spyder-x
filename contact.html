@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>تواصل معنا | SPIDBRICK</title>
+  <meta name="description" content="تواصل مع SPIDBRICK عبر واتساب أو إنستغرام أو تيك توك.">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&family=UnifrakturMaguntia&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div id="site-header"></div>
+
+  <main class="wrap">
+    <div class="page-title">
+      <h1>تواصل معنا</h1>
+      <p>نرد على الرسائل خلال ساعات العمل. للطلبات استخدم صفحة السلة.</p>
+    </div>
+
+    <div class="social-grid section" style="padding-top:20px">
+      <div class="social-card">
+        <h3>واتساب</h3>
+        <p class="muted">أسرع طريقة للاستفسار عن المقاسات والطلبات.</p>
+        <a class="btn primary" id="waLink" href="#" target="_blank" rel="noopener">فتح واتساب</a>
+      </div>
+      <div class="social-card">
+        <h3>Instagram و TikTok</h3>
+        <p class="muted">أحدث الإصدارات والعروض.</p>
+        <a class="btn" href="https://www.instagram.com/spidbrick" target="_blank" rel="noopener">Instagram</a>
+        <a class="btn" href="https://www.tiktok.com/@spidbrick" target="_blank" rel="noopener" style="margin-top:8px">TikTok</a>
+      </div>
+    </div>
+
+    <section class="panel" style="max-width:720px;margin:10px auto 60px">
+      <h2>رسالة سريعة عبر واتساب</h2>
+      <p class="muted" style="margin-top:0">تفتح الرسالة في واتساب ولا تُحفظ على الموقع.</p>
+      <div id="contactMsg"></div>
+      <form id="contactForm" novalidate>
+        <label for="cName">الاسم</label>
+        <input id="cName" maxlength="60" required>
+        <div class="err" data-err="cName"></div>
+
+        <label for="cText">رسالتك</label>
+        <textarea id="cText" maxlength="500" placeholder="مثال: واش المقاس المناسب لي إذا وزني 75 كغ؟"></textarea>
+        <div class="err" data-err="cText"></div>
+
+        <div style="margin-top:16px">
+          <button type="submit" class="btn primary" id="sendBtn" style="width:100%">إرسال عبر واتساب</button>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="js/config.js"></script>
+  <script src="js/store.js"></script>
+  <script src="js/layout.js"></script>
+  <script src="js/contact.js"></script>
+</body>
+</html>

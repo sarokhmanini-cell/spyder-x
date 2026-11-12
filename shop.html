@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>المتجر | SPIDBRICK</title>
+  <meta name="description" content="تسوق جميع قطع SPIDBRICK: تيشيرتات، هوديات، سراويل وجاكيتات.">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&family=UnifrakturMaguntia&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div id="site-header"></div>
+
+  <main class="wrap">
+    <div class="page-title">
+      <h1>المتجر</h1>
+      <p>كل القطع السوداء والبنفسجية في مكان واحد.</p>
+    </div>
+
+    <div class="shop">
+      <aside class="filters" aria-label="تصفية المنتجات">
+        <h3>الفئة</h3>
+        <div class="chips" id="cats"></div>
+
+        <label for="size">المقاس</label>
+        <select id="size"></select>
+
+        <label for="sort">الترتيب</label>
+        <select id="sort">
+          <option value="new">الأحدث</option>
+          <option value="priceAsc">السعر: من الأقل</option>
+          <option value="priceDesc">السعر: من الأعلى</option>
+          <option value="sale">التخفيضات أولاً</option>
+        </select>
+
+        <label for="q">بحث</label>
+        <input id="q" type="search" placeholder="ابحث عن قطعة...">
+
+        <label class="check"><input id="inStock" type="checkbox"> المتوفر فقط</label>
+      </aside>
+
+      <section>
+        <div class="toolbar"><span id="count"></span></div>
+        <div class="grid" id="grid"><div class="empty">جارٍ التحميل...</div></div>
+      </section>
+    </div>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="js/config.js"></script>
+  <script src="js/store.js"></script>
+  <script src="js/layout.js"></script>
+  <script src="js/shop.js"></script>
+</body>
+</html>

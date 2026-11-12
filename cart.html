@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>السلة | SPIDBRICK</title>
+  <meta name="robots" content="noindex">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&family=UnifrakturMaguntia&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div id="site-header"></div>
+
+  <main class="wrap">
+    <div class="page-title">
+      <h1>سلة التسوق</h1>
+      <p>تُحفظ السلة في هذا المتصفح.</p>
+    </div>
+
+    <div class="cart-layout">
+      <section id="cartBox"><div class="empty">جارٍ التحميل...</div></section>
+
+      <aside class="summary" id="summary" style="display:none">
+        <h3>ملخص الطلب</h3>
+        <div class="row"><span>عدد القطع</span><span id="sumCount">0</span></div>
+        <div class="row"><span>المجموع الفرعي</span><span id="sumSub">0</span></div>
+        <div class="row"><span>التوصيل</span><span class="muted">يُحسب عند إتمام الطلب</span></div>
+        <div class="row total"><span>المجموع</span><span id="sumTotal">0</span></div>
+        <p class="muted" id="sumNote" style="font-size:13px"></p>
+        <button type="button" class="btn primary" id="checkoutBtn">متابعة إتمام الطلب</button>
+        <a class="btn" href="shop.html" style="width:100%;margin-top:10px">متابعة التسوق</a>
+      </aside>
+    </div>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="js/config.js"></script>
+  <script src="js/store.js"></script>
+  <script src="js/layout.js"></script>
+  <script src="js/cart.js"></script>
+</body>
+</html>
